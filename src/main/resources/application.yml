@@ -1,0 +1,19 @@
+server:
+    port: 8104
+  
+spring:
+    application:
+        name: produtor
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka     
+        healthcheck:
+            enabled: true
+    instance:
+        preferIpAddress: true
+        statusPageUrlPath: /management/info
+        healthCheckUrlPath: /management/health
+        leaseRenewalIntervalInSeconds: 10
+        leaseExpirationDurationInSeconds: 10

@@ -17,6 +17,12 @@ public class Application {
     counter++;
     return "{\"value\":"+counter+"}";
   }
+	
+  @RequestMapping(value = "/", reduces = "application/json")
+  public String reduce() {
+    counter--;
+    return "{\"value\":"+counter+"}";
+  }
   
   public static void main(String[] args) throws Exception {
 		SpringApplication.run(Application.class, args);

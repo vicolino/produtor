@@ -19,7 +19,7 @@ public class Application {
   }
 	
   @RequestMapping(value = "/", reduces = "application/json")
-  public String reduce() {
+  public String reduces() {
     counter--;
     return "{\"value\":"+counter+"}";
   }

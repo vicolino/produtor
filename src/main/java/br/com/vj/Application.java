@@ -18,7 +18,7 @@ public class Application {
     return "{\"value\":"+counter+"}";
   }
 	
-  @RequestMapping(value = "/", reduces = "application/json")
+  @RequestMapping(value = "/reduce", produces = "application/json")
   public String reduces() {
     counter--;
     return "{\"value\":"+counter+"}";
